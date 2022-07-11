@@ -1,0 +1,28 @@
+{% extends 'instaworkapp/base.html' %}
+{% load static %}
+{% block body_block %}
+    <div class="float-right"><a href="{% url 'create' %}"><i class="fas fa-plus"></i></a></div>
+
+   {% if team_members %}
+       <h2>Team Members</h2>
+       <p class="text-muted">You have {{ team_count }} team members</p>
+       <ul class="list-group">
+           {% for team_member in team_members %}
+                <a href="{% url 'update' team_member.id %}">
+                    <li class="list-group-item d-flex">
+                        <div class="image-parent">
+                            <img src="{% static "instaworkapp/user.png" %}" class="img-fluid" alt="quixote">
+                        </div>
+                        <div class="image-parent ml-3">
+                            <div>{{ team_member.first_name}} {{ team_member.last_name}} {{ team_member.role_text }}</div>
+                            <div class="text-muted">{{ team_member.phone_number}}</div>
+                            <div class="text-muted">{{ team_member.email}}</div>
+                        </div>
+                    </li>
+                </a>
+           {% endfor %}
+       </ul>
+   {% else %}
+        <strong>There are no team members</strong>
+   {% endif %}
+{% endblock %}

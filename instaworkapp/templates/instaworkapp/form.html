@@ -1,0 +1,66 @@
+{% extends 'instaworkapp/base.html' %}
+{% block body_block %}
+    <div class="float-right"><a href="{% url 'index' %}"><i class="fas fa-arrow-left"></i></a></div>
+    <div class="form_container">
+
+        {% if mem_id %}
+            <label for="formFile" class="form-label" style="display: block;">
+                <h2>Edit Team Member</h2>
+                <p class="text-muted">Edit contact info, location and role.</p>
+            </label>
+            <form action="{% url "update" mem_id %}" method="post" enctype="multipart/form-data">
+        {% else %}
+            <label for="formFile" class="form-label" style="display: block;">
+                <h2>Add Team Member</h2>
+                <p class="text-muted">Set email, location and role.</p>
+            </label>
+            <form action="{% url "create" %}" method="post" enctype="multipart/form-data">
+        {% endif %}
+            {% if errors %}
+                <h4 class="text-danger">Errors</h4>
+               {% for key, error_list in errors.items %}
+                   <span class="text-danger">{{key}}</span> : <span class="text-danger">{{error_list}}</span>
+               {% endfor %}
+            {% endif %}
+
+            <hr />
+            {% csrf_token %}
+            <h4>
+                Info
+            </h4>
+            <div class="form-group">
+                {{ form.first_name }}
+            </div>
+            <div class="form-group">
+                {{ form.last_name }}
+            </div>
+            <div class="form-group">
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                {{ form.phone_number }}
+            </div>
+
+            <h4>
+                Role
+            </h4>
+
+            <div class="form-group">
+                {{  form.assigned_role }}
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    {% if mem_id %}
+                        <a href="{% url 'delete' mem_id %}" class="btn btn-outline-danger">Delete</a>
+                    {% endif %}
+                    <button type="submit" class="btn btn-primary float-right">Save</button>
+                </div>
+
+
+
+            </div>
+
+        </form>
+    </div>
+{% endblock %}
