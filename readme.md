@@ -5,6 +5,7 @@
 - [Requirements](#requirements)
 - [Working Demo](#wokring-demo)
 - [Tech Stack](#tech-stack)
+- [Project Architecture](#project-architecture)
 - [Local Machine Setup](#local-machine-setup)
     - [Python & Pip Installation](#local-machine-setup)
     - [Installing virtualenv](#local-machine-setup)
