@@ -1,7 +1,6 @@
-# Media Convertor Application
-## _Assignment Project_
+# Instawork Assignment
+## _Full Stack Project_
 
-Media Convertor is a cloud-based WAV to MIDI convertor system.
 
 - [Requirements](#requirements)
 - [Working Demo](#wokring-demo)
@@ -17,12 +16,13 @@ Media Convertor is a cloud-based WAV to MIDI convertor system.
 - [Future Scope](#tech-stack)
 
 ## Requirements
-- Webpage should have an option to upload the WAV file for conversion 
-- Webpage should allow link of WAV instrumental music file as input for conversion
-- After File conversion is complete, the MIDI file should be automatically downloaded
+- Webapp should have list of all team members 
+- Webapp should allow adding new team members
+- Webapp should allow editing existing team members
+- Webapp should allow deleting existing team members
 
 ## Working Demo
-![project_working](assets/media-convertor.gif)
+![project_working](assets/instawork-demo.gif)
 
 ## Tech Stack
 
@@ -32,6 +32,19 @@ Important libraries and frameworks used in this project:
 - [Django](https://www.djangoproject.com/) - _3.2.8_, High-level Python web framework that encourages rapid development and clean, pragmatic design
 - [SQLite](https://www.sqlite.org/index.html) - _1.4.2_, In-built Light Weight Database
 - [gunicorn](https://gunicorn.org/) - Python WSGI HTTP Server for UNIX
+
+## Project Architecture
+
+The Project mainly contains single module
+- TeamMember
+    - Contains first and last name information
+    - Contains email information
+    - Contains phone number information
+    - Contains information about assigned rol
+
+#### DB architecture:
+<img src="assets/db-diagram.png" alt="drawing" width="400"/>
+    
 
 ## Local Machine Setup
 
@@ -52,15 +65,15 @@ sudo -H pip install virtualenv
 ### Step 3:
 Cloning the repository:
 ```sh
-git clone https://github.com/nischay-dhiman/media-convertor.git
-cd media-convertor
+git clone https://github.com/nischay-dhiman/instawork_assignment.git
+cd instawork_assignment
 ```
 
 ### Step 4:
 Activating the virtual env:
 ```shell
-virtualenv MediaConvertor
-source MediaConvertor/bin/activate
+virtualenv InstaworkAssignment
+source InstaworkAssignment/bin/activate
 ```
 
 ### Step 5:
