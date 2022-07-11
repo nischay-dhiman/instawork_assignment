@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '5699-142-114-136-122.ngrok.io',
     '127.0.0.1',
-    '172-105-18-223.ip.linodeusercontent.com/'
+    '172-105-18-223.ip.linodeusercontent.com'
     ]
 
 
