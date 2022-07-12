@@ -21,3 +21,6 @@ class TeamMember(models.Model):
             return " (admin) "
         else:
             return ""
+
+    def __str__(self):
+        return self.email
