@@ -14,7 +14,7 @@
     - [Installing all the required libraries and dependencies](#local-machine-setup)
     - [Migrating tables for the first time](#local-machine-setup)
     - [Running the server on local](local-machine-setup)
-- [Future Scope](#tech-stack)
+- [Future Scope](#future-scope)
 
 ## Requirements
 - Webapp should have list of all team members 
@@ -102,3 +102,10 @@ We should see something like this in the browser:
 
 ![image logo](assets/local-output.png)
 
+## Future Scope
+- Search filter for Team Members
+- Pagination for Team Members
+- Login for Team members
+- Profile Image add for Team members
+- Document sharing or Chat application for each member
+- Creating Groups of Team members
