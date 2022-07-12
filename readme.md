@@ -54,7 +54,7 @@ The Project mainly contains single module
 
 You may have python preinstalled. To verify other python requirements Installation, Run:
 ```sh
-sudo apt-get install python3-pip python3-dev libpq-dev libsndfile1
+sudo apt-get install python3-pip python3-dev
 ```
 
 ### Step 2:
