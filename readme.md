@@ -14,6 +14,7 @@
     - [Installing all the required libraries and dependencies](#local-machine-setup)
     - [Migrating tables for the first time](#local-machine-setup)
     - [Running the server on local](local-machine-setup)
+- [Testing](#testing)
 - [Future Scope](#future-scope)
 
 ## Requirements
@@ -41,7 +42,7 @@ The Project mainly contains single module
     - Contains first and last name information
     - Contains email information
     - Contains phone number information
-    - Contains information about assigned rol
+    - Contains information about assigned role
 
 #### DB architecture:
 <img src="assets/db-diagram.png" alt="drawing" width="400"/>
@@ -101,6 +102,13 @@ http://0.0.0.0:8000/
 We should see something like this in the browser:
 
 ![image logo](assets/local-output.png)
+
+## Testing
+
+We can run testcases on our local machine using:
+```
+python manage.py test
+```
 
 ## Future Scope
 - Search filter for Team Members
