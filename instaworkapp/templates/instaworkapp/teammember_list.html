@@ -1,14 +1,14 @@
 {% extends 'instaworkapp/base.html' %}
 {% load static %}
 {% block body_block %}
-    <div class="float-right"><a href="{% url 'create' %}"><i class="fas fa-plus"></i></a></div>
+    <div class="float-right"><a href="{% url 'teammember-create' %}"><i class="fas fa-plus"></i></a></div>
 
     <h2>Team Members</h2>
    {% if team_members %}
-       <p class="text-muted">You have {{ team_count }} team members</p>
+       <p class="text-muted">You have {{ team_members.count }} team members</p>
        <ul class="list-group">
            {% for team_member in team_members %}
-                <a href="{% url 'update' team_member.id %}">
+                <a href="{% url 'teammember-update' team_member.id %}">
                     <li class="list-group-item d-flex">
                         <div class="image-parent">
                             <img src="{% static "instaworkapp/user.png" %}" class="img-fluid" alt="quixote">
